@@ -1,6 +1,6 @@
 <ErrorNull>
 	
-	<set xpath="/entity_classes/entity_class/property[@name='LootDropProb']/@value">0</set>
+	<!--<set xpath="/entity_classes/entity_class/property[@name='LootDropProb']/@value">0</set>-->
 	<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='TimeStayAfterDeath']/@value">90</set>
 	
 	<!-- ******************************* -->

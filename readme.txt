@@ -1,7 +1,10 @@
-enZombie Harvest v1.4
+enZombie Harvest v1.5
 https://community.7daystodie.com/topic/24594-enzombies-more-zombie-variations/
 
 This mod is meant for use with enZombies v2.2 and adds the ability to harvest all enZombies and vanilla zombies for resources (eg. cloth, rotten flesh, bones) when they are defeated. Zombies that are not harvested will remain for 90 seconds before disappearing. This mod also slightly changes the recipes of the main game to require more of those resources in order to rebalance the game.
+
+Version 1.5 Update:
+- added body harvest ability to new utility zombies, football zombies, and school zombies
 
 Version 1.4 Update:
 - added body harvest for enLab196, enScreamer196, enSoldier196, enSpider196

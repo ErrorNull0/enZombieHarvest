@@ -1,7 +1,7 @@
 <ErrorNull>
 	
-	<!--<set xpath="/entity_classes/entity_class/property[@name='LootDropProb']/@value">0</set>-->
-	<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='TimeStayAfterDeath']/@value">90</set>
+	<!-- Default value is 30 seconds. Increased to 100 to allow players more time to harvest. -->
+	<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='TimeStayAfterDeath']/@value">100</set>
 	
 	<!-- ******************************* -->
 	<!-- ********** enZombies ********** -->
@@ -463,6 +463,24 @@
 		<drop event="Destroy" name="resourceScrapPolymers"	count="3,6"/>
 	</append>
 	
+	<append xpath="/entity_classes/entity_class[contains(@name,'enFootballMale3')]">
+		<property name="DeadBodyHitPoints" value="330"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth"			count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"		count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"			count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="resourceScrapPolymers"	count="3,6"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'enFootballMale4')]">
+		<property name="DeadBodyHitPoints" value="340"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth"			count="4" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"		count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"			count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="resourceScrapPolymers"	count="3,6"/>
+	</append>
+	
 	<append xpath="/entity_classes/entity_class[contains(@name,'enForestHikerFemale1')]">
 		<property name="DeadBodyHitPoints" value="280"/>
 		<property name="LootListOnDeath" value="cntHikerBackpack"/>
@@ -792,6 +810,48 @@
 		<drop event="Destroy" name="oldCash" 			count="10,15"/>
 	</append>
 	
+	<append xpath="/entity_classes/entity_class[contains(@name,'enSchoolFemale1')]">
+		<property name="DeadBodyHitPoints" value="280"/>
+		<property name="LootListOnDeath" value="cntBagSchool"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth"		count="6" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"	count="2" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceAnimalFat"	count="1" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="oldCash" 			count="1,5"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'enSchoolFemale2')]">
+		<property name="DeadBodyHitPoints" value="285"/>
+		<property name="LootListOnDeath" value="cntBagSchool"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth"		count="7" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"	count="2" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceAnimalFat"	count="1" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="oldCash" 			count="1,5"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'enSchoolMale1')]">
+		<property name="DeadBodyHitPoints" value="285"/>
+		<property name="LootListOnDeath" value="cntBagSchool"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth"		count="6" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"	count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="oldCash" 			count="1,5"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'enSchoolMale2')]">
+		<property name="DeadBodyHitPoints" value="280"/>
+		<property name="LootListOnDeath" value="cntBagSchool"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth"		count="6" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"	count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="oldCash" 			count="1,5"/>
+	</append>
+	
 	<append xpath="/entity_classes/entity_class[contains(@name,'enScreamer196')]">
 		<property name="DeadBodyHitPoints" value="280"/>
 		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
@@ -840,8 +900,6 @@
 		<drop event="Destroy" name="resourceBone" 		count="1"/>
 		<drop event="Destroy" name="oldCash" 			count="1,10"/>
 	</append>
-	
-	
 	
 	<append xpath="/entity_classes/entity_class[contains(@name,'enSnowFemale1')]">
 		<property name="DeadBodyHitPoints" value="280"/>
@@ -1162,7 +1220,30 @@
 		<drop event="Destroy" name="oldCash" 					count="15,20"/>
 	</append>
 	
-	<append xpath="/entity_classes/entity_class[contains(@name,'enUtility')]">
+	<append xpath="/entity_classes/entity_class[contains(@name,'enUtilityFemale1')]">
+		<property name="DeadBodyHitPoints" value="280"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceScrapPolymers"		count="4" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceMechanicalParts"	count="2" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceCloth"				count="6" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"			count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"				count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="oldCash" 					count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'enUtilityFemale2')]">
+		<property name="DeadBodyHitPoints" value="280"/>
+		<property name="LootListOnDeath" value="cntBagUtilityFemale2"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceScrapPolymers"	count="4" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceScrapIron"		count="20" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceCloth"			count="6" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"		count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"			count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="oldCash" 				count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'enUtilityMale1')]">
 		<property name="DeadBodyHitPoints" value="300"/>
 		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
 		<drop event="Harvest" name="resourceScrapPolymers"	count="4" tag="butcherHarvest"/>
@@ -1172,9 +1253,51 @@
 		<drop event="Destroy" name="oldCash" 			count="1,10"/>
 	</append>
 	
-	<append xpath="/entity_classes/entity_class[contains(@name,'enUtility3')]">
+	<append xpath="/entity_classes/entity_class[contains(@name,'enUtilityMale2')]">
+		<property name="DeadBodyHitPoints" value="300"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceScrapPolymers"	count="4" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceCloth"		count="6" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"	count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'enUtilityMale3')]">
+		<property name="DeadBodyHitPoints" value="300"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceScrapPolymers"	count="4" tag="butcherHarvest"/>
 		<drop event="Harvest" name="resourceForgedIron" count="2" tag="butcherHarvest"/>
 		<drop event="Harvest" name="resourceWood" 		count="1" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceCloth"		count="6" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"	count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'enUtilityMale4')]">
+		<property name="DeadBodyHitPoints" value="300"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceScrapPolymers"	count="4" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceScrapIron"	count="70" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceWood" 		count="2" 	tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceCloth"		count="6" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"	count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'enUtilityMale5')]">
+		<property name="DeadBodyHitPoints" value="320"/>
+		<property name="LootListOnDeath" value="cntBagUtilityMale5"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceScrapPolymers"	count="4" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceForgedIron" count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceWood" 		count="2" 	tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceCloth"		count="6" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"	count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
 	</append>
 	
 	<append xpath="/entity_classes/entity_class[contains(@name,'enWastelandFemale1')]">
@@ -1508,598 +1631,9 @@
 	
 	
 	
-	<!-- ************************************* -->
-	<!-- ********** vanilla zombies ********** -->
-	<!-- ************************************* -->
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieWight')]">
-		<property name="DeadBodyHitPoints" value="360"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest"	name="foodRottingFlesh"	count="3"	tag="butcherHarvest"/>
-		<drop event="Harvest"	name="resourceBone"		count="2"	tag="butcherHarvest"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieBoe')]">
-		<property name="DeadBodyHitPoints" value="280"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-	<!--
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieFootballPlayer')]">
-		<property name="DeadBodyHitPoints" value="280"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="2"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-	</append>
-	-->
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieFemaleFat')]">
-		<property name="DeadBodyHitPoints" value="380"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Harvest" name="resourceAnimalFat" 	count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceAnimalFat" 	count="1" tag="butcherHarvest"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieJoe')]">
-		<property name="DeadBodyHitPoints" value="270"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieJanitor')]">
-		<property name="DeadBodyHitPoints" value="280"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieMoe')]">
-		<property name="DeadBodyHitPoints" value="320"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth"		count="3" tag="butcherHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh"	count="3" tag="butcherHarvest"/>
-		<drop event="Harvest" name="resourceAnimalFat"	count="2" tag="butcherHarvest"/>
-		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieArlene')]">
-		<property name="DeadBodyHitPoints" value="280"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieLab')]">
-		<property name="DeadBodyHitPoints" value="280"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth"		count="5" tag="butcherHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh"	count="2" tag="butcherHarvest"/>
-		<drop event="Harvest" name="resourceAnimalFat"	count="1" tag="butcherHarvest"/>
-		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
-		<drop event="Destroy" name="oldCash" 			count="10,15"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieScreamer')]">
-		<property name="DeadBodyHitPoints" value="280"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth"		count="3" tag="butcherHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh"	count="2" tag="butcherHarvest"/>
-		<drop event="Harvest" name="resourceAnimalFat"	count="1" tag="butcherHarvest"/>
-		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
-		<drop event="Destroy" name="oldCash" 			count="0"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieDarlene')]">
-		<property name="DeadBodyHitPoints" value="280"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="0,1"/>
-		<drop event="Harvest" name="resourceAnimalFat" 	count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieMarlene')]">
-		<property name="DeadBodyHitPoints" value="280"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="0,1"/>
-		<drop event="Harvest" name="resourceAnimalFat" 	count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieYo')]">
-		<property name="DeadBodyHitPoints" value="280"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
-		<drop event="Harvest" name="resourceLeather" 	count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceLeather" 	count="1"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[@name='zombieSteve']">
-		<property name="DeadBodyHitPoints" value="270"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[@name='zombieSteveFeral']">
-		<property name="DeadBodyHitPoints" value="270"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[@name='zombieSteveRadiated']">
-		<property name="DeadBodyHitPoints" value="270"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieSteveCrawler')]">
-		<property name="DeadBodyHitPoints" value="160"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="foodRottingFlesh" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="0,0"/>
-		<drop event="Destroy" name="resourcePotassiumNitratePowder" count="1,1"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieBusinessMan')]">
-		<property name="DeadBodyHitPoints" value="280"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="1,2"/> 
-		<drop event="Harvest" name="resourceLeather" 	count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceLeather" 	count="1"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="10,30"/>
-	</append>
-	
-	<!--
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieSnow')]">
-		<property name="DeadBodyHitPoints" value="360"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="1,2"/> 
-		<drop event="Harvest" name="resourceLeather" 	count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceLeather" 	count="1" tag="butcherHarvest"/>
-		<drop event="Destroy" name="resourceLeather" 	count="1"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Harvest" name="resourceAnimalFat" 	count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="butcherHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="0,1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	-->
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieLumberjack')]">
-		<property name="DeadBodyHitPoints" value="360"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="1,2"/> 
-		<drop event="Harvest" name="resourceLeather" 	count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceLeather" 	count="1" tag="butcherHarvest"/>
-		<drop event="Destroy" name="resourceLeather" 	count="1"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Harvest" name="resourceAnimalFat" 	count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="butcherHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="0,1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieSpider')]">
-		<property name="DeadBodyHitPoints" value="270"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="0,1"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieTomClark')]">
-		<property name="DeadBodyHitPoints" value="270"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="0,1"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'enSpider196')]">
-		<property name="DeadBodyHitPoints" value="270"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth"		count="2" tag="butcherHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh"	count="3" tag="butcherHarvest"/>
-		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'enSpiderTom')]">
-		<property name="DeadBodyHitPoints" value="270"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth"		count="2" tag="butcherHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh"	count="3" tag="butcherHarvest"/>
-		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
-		<drop event="Destroy" name="oldCash" 			count="5,10"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieBurnt')]">
-		<property name="DeadBodyHitPoints" value="280"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="0,1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="resourceCoal" 		count="1,2"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieNurse')]">
-		<property name="DeadBodyHitPoints" value="280"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="0,1"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="0,1"/>
-		<drop event="Harvest" name="resourceAnimalFat" 	count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieFatHawaiian')]">
-		<property name="DeadBodyHitPoints" value="380"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth"		count="4" tag="butcherHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh"	count="3" tag="butcherHarvest"/>
-		<drop event="Harvest" name="resourceAnimalFat"	count="4" tag="butcherHarvest"/>
-		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
-		<drop event="Destroy" name="oldCash" 			count="10,15"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieFatCop')]">
-		<property name="DeadBodyHitPoints" value="380"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>		
-		<drop event="Harvest" name="resourceCloth"		count="5" tag="butcherHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh"	count="3" tag="butcherHarvest"/>
-		<drop event="Harvest" name="resourceAnimalFat"	count="4" tag="butcherHarvest"/>
-		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
-		<drop event="Destroy" name="oldCash" 			count="10,30"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieMaleHazmat')]">
-		<property name="DeadBodyHitPoints" value="300"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="3" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="3" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="3,4"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="0,1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-		<drop event="Destroy" name="resourceScrapIron"		count="6,8"/>
-		<drop event="Destroy" name="resourceBrokenGlass"	count="2,3"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieUtilityWorker')]">
-		<property name="DeadBodyHitPoints" value="300"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="2,3"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-		<drop event="Harvest" name="resourceScrapPolymers" 	count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceScrapPolymers" 	count="1" tag="butcherHarvest"/>
-		<drop event="Destroy" name="resourceScrapPolymers" 	count="1,2"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieSoldier')]">
-		<property name="DeadBodyHitPoints" value="300"/>
-		<drop event="Harvest" 	name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest"	name="resourceCloth"			count="5"	tag="butcherHarvest"/>
-		<drop event="Harvest"	name="resourceLeather"			count="6"	tag="butcherHarvest"/>
-		<drop event="Harvest"	name="resourceScrapIron"		count="20"	tag="butcherHarvest"/>
-		<drop event="Harvest"	name="foodRottingFlesh"			count="3"	tag="butcherHarvest"/>
-		<drop event="Harvest"	name="resourceBone"				count="2"	tag="butcherHarvest"/>
-		<drop event="Destroy" 	name="oldCash" 					count="10,15"/>
-	</append>
-		
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieDemolition')]">
-		<property name="DeadBodyHitPoints" value="380"/>
-		<drop event="Harvest" 	name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest"	name="resourceCloth"			count="4"	tag="butcherHarvest"/>
-		<drop event="Harvest"	name="resourceLeather"			count="5"	tag="butcherHarvest"/>
-		<drop event="Harvest"	name="resourceScrapIron"		count="20"	tag="butcherHarvest"/>
-		<drop event="Harvest"	name="resourceAnimalFat"		count="1"	tag="butcherHarvest"/>
-		<drop event="Harvest"	name="foodRottingFlesh"			count="4"	tag="butcherHarvest"/>
-		<drop event="Harvest"	name="resourceBone"				count="2"	tag="butcherHarvest"/>
-		<drop event="Harvest"	name="resourceElectricParts"	count="2"	tag="butcherHarvest"/>
-		<drop event="Harvest"	name="thrownGrenade"			count="5"	tag="butcherHarvest"/>
-		<drop event="Destroy" 	name="oldCash" 					count="30,50"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieSkateboarder')]">
-		<property name="DeadBodyHitPoints" value="290"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="2,3"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-	<!--
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieCheerleader')]">
-		<property name="DeadBodyHitPoints" value="280"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="0,1"/>
-		<drop event="Harvest" name="resourceAnimalFat" 	count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1,0"/>
-		<drop event="Destroy" name="oldCash" 			count="0,5"/>
-	</append>
-	-->
-	
-	<!--
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieOldTimer')]">
-		<property name="DeadBodyHitPoints" value="290"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceLeather"		count="6" tag="butcherHarvest"/>
-		<drop event="Harvest" name="resourceCloth"			count="3" tag="butcherHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh"		count="3" tag="butcherHarvest"/>
-		<drop event="Harvest" name="resourceBone"			count="2" tag="butcherHarvest"/>
-		<drop event="Destroy" name="oldCash" 				count="1,10"/>
-		<drop event="Destroy" name="apparelPlantFiberHat" 	count="1"/>
-	</append>
-	-->
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieBiker')]">
-		<property name="DeadBodyHitPoints" value="320"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
-		<drop event="Harvest" name="resourceLeather" 	count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceLeather" 	count="2" tag="butcherHarvest"/>
-		<drop event="Destroy" name="resourceLeather" 	count="1"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="butcherHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="0,1"/>
-		<drop event="Destroy" name="oldCash" 			count="10,15"/>
-		<drop event="Harvest" name="resourceScrapPolymers" 	count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceScrapPolymers" 	count="1" tag="butcherHarvest"/>
-		<drop event="Destroy" name="resourceScrapPolymers" 	count="1,2"/>
-	</append>
-	
-	<!--
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieFarmer')]">
-		<property name="DeadBodyHitPoints" value="300"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="resourceCloth" 		count="1,2"/> 
-		<drop event="Harvest" name="resourceLeather" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceLeather" 	count="1" tag="butcherHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	-->
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombiePartyGirl')]">
-		<property name="DeadBodyHitPoints" value="280"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceCloth" 		count="0,1"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="0,1"/>
-		<drop event="Harvest" name="resourceAnimalFat" 	count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="30,50"/>
-	</append>
-	
-	<append xpath="/entity_classes/entity_class[contains(@name,'zombieMutated')]">
-		<property name="DeadBodyHitPoints" value="270"/>
-		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
-		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
-		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
-		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
-		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
-		<drop event="Destroy" name="resourceBone" 		count="1"/>
-		<drop event="Destroy" name="oldCash" 			count="1,10"/>
-	</append>
-	
-
-
-	<!-- ************************************* -->
-	<!-- ********** vanilla animals ********** -->
-	<!-- ************************************* -->
-	
-	<set xpath="/entity_classes/entity_class[@name='animalBear']/drop[@name='resourceAnimalFat']/@count">3</set> <!-- 5 -->
-	<set xpath="/entity_classes/entity_class[@name='animalZombieBear']/drop[@name='resourceAnimalFat']/@count">3</set> <!-- 5 -->
-	<set xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@name='resourceAnimalFat']/@count">2</set> <!-- 3 -->
-	<set xpath="/entity_classes/entity_class[@name='animalCoyote']/drop[@name='resourceAnimalFat']/@count">1</set> <!-- 2 -->
-	<set xpath="/entity_classes/entity_class[@name='animalDireWolf']/drop[@name='resourceAnimalFat']/@count">2</set> <!-- 3 -->
-	<set xpath="/entity_classes/entity_class[@name='animalMountainLion']/drop[@name='resourceAnimalFat']/@count">2</set> <!-- 4 -->
-	<set xpath="/entity_classes/entity_class[@name='animalZombieDog']/drop[@name='resourceAnimalFat']/@count">0</set> <!-- 1 -->
-	<set xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='resourceAnimalFat']/@count">2</set> <!-- 4 -->
-	<set xpath="/entity_classes/entity_class[@name='animalBossGrace']/drop[@name='resourceAnimalFat']/@count">10</set> <!-- 20 -->
-	<set xpath="/entity_classes/entity_class[@name='animalStag']/drop[@name='resourceAnimalFat']/@count">2</set> <!-- 3 -->
-	<set xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@name='resourceAnimalFat']/@count">1</set> <!-- 2 -->
 	
 	
 	
-	<!-- ****************************************** -->
-	<!-- ********** corpses and bodybags ********** -->
-	<!-- ****************************************** -->
-	
-	<!--<set xpath="/blocks/block[@name='bodyBagBlack']/drop[@name='resourceAnimalFat']/@count">0,1</set>--> <!-- 1,2 -->
-	<!--<set xpath="/blocks/block[@name='goreBlockAnimal']/drop[@name='resourceAnimalFat']/@count">0,1</set>--> <!-- 1,2 -->
-
-
-
 	<!-- ************************************** -->
 	<!-- ********** KHzMuzik zombies ********** -->
 	<!-- ************************************** -->
@@ -2453,4 +1987,506 @@
 		<drop event="Destroy" name="resourceScrapIron" 	count="10,20"/>
 	</append>
 	
+	
+	
+	
+	
+	
+	
+	<!-- ************************************* -->
+	<!-- ********** vanilla zombies ********** -->
+	<!-- ************************************* -->
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieWight')]">
+		<property name="DeadBodyHitPoints" value="360"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest"	name="foodRottingFlesh"	count="3"	tag="butcherHarvest"/>
+		<drop event="Harvest"	name="resourceBone"		count="2"	tag="butcherHarvest"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieBoe')]">
+		<property name="DeadBodyHitPoints" value="280"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieFemaleFat')]">
+		<property name="DeadBodyHitPoints" value="380"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
+		<drop event="Harvest" name="resourceAnimalFat" 	count="2" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceAnimalFat" 	count="1" tag="butcherHarvest"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieJoe')]">
+		<property name="DeadBodyHitPoints" value="270"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieJanitor')]">
+		<property name="DeadBodyHitPoints" value="280"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieMoe')]">
+		<property name="DeadBodyHitPoints" value="320"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth"		count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"	count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceAnimalFat"	count="2" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieArlene')]">
+		<property name="DeadBodyHitPoints" value="280"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieLab')]">
+		<property name="DeadBodyHitPoints" value="280"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth"		count="5" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"	count="2" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceAnimalFat"	count="1" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="oldCash" 			count="10,15"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieScreamer')]">
+		<property name="DeadBodyHitPoints" value="280"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth"		count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"	count="2" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceAnimalFat"	count="1" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="oldCash" 			count="0"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieDarlene')]">
+		<property name="DeadBodyHitPoints" value="280"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="0,1"/>
+		<drop event="Harvest" name="resourceAnimalFat" 	count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieMarlene')]">
+		<property name="DeadBodyHitPoints" value="280"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="0,1"/>
+		<drop event="Harvest" name="resourceAnimalFat" 	count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieYo')]">
+		<property name="DeadBodyHitPoints" value="280"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
+		<drop event="Harvest" name="resourceLeather" 	count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceLeather" 	count="1"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[@name='zombieSteve']">
+		<property name="DeadBodyHitPoints" value="270"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[@name='zombieSteveFeral']">
+		<property name="DeadBodyHitPoints" value="270"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[@name='zombieSteveRadiated']">
+		<property name="DeadBodyHitPoints" value="270"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="resourceCloth" 		count="1"/> 
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieSteveCrawler')]">
+		<property name="DeadBodyHitPoints" value="160"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="foodRottingFlesh" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="0,0"/>
+		<drop event="Destroy" name="resourcePotassiumNitratePowder" count="1,1"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieBusinessMan')]">
+		<property name="DeadBodyHitPoints" value="280"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceCloth" 		count="2" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="resourceCloth" 		count="1,2"/> 
+		<drop event="Harvest" name="resourceLeather" 	count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceLeather" 	count="1"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="10,30"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieLumberjack')]">
+		<property name="DeadBodyHitPoints" value="360"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceCloth" 		count="2" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="resourceCloth" 		count="1,2"/> 
+		<drop event="Harvest" name="resourceLeather" 	count="2" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceLeather" 	count="1" tag="butcherHarvest"/>
+		<drop event="Destroy" name="resourceLeather" 	count="1"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
+		<drop event="Harvest" name="resourceAnimalFat" 	count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="butcherHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="0,1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieSpider')]">
+		<property name="DeadBodyHitPoints" value="270"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="resourceCloth" 		count="0,1"/> 
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieTomClark')]">
+		<property name="DeadBodyHitPoints" value="270"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="resourceCloth" 		count="0,1"/> 
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'enSpider196')]">
+		<property name="DeadBodyHitPoints" value="270"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth"		count="2" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"	count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'enSpiderTom')]">
+		<property name="DeadBodyHitPoints" value="270"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth"		count="2" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"	count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="oldCash" 			count="5,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieBurnt')]">
+		<property name="DeadBodyHitPoints" value="280"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="0,1"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="resourceCoal" 		count="1,2"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieNurse')]">
+		<property name="DeadBodyHitPoints" value="280"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceCloth" 		count="2" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="resourceCloth" 		count="0,1"/> 
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="0,1"/>
+		<drop event="Harvest" name="resourceAnimalFat" 	count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieFatHawaiian')]">
+		<property name="DeadBodyHitPoints" value="380"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth"		count="4" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"	count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceAnimalFat"	count="4" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="oldCash" 			count="10,15"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieFatCop')]">
+		<property name="DeadBodyHitPoints" value="380"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>		
+		<drop event="Harvest" name="resourceCloth"		count="5" tag="butcherHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh"	count="3" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceAnimalFat"	count="4" tag="butcherHarvest"/>
+		<drop event="Harvest" name="resourceBone"		count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="oldCash" 			count="10,30"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieMaleHazmat')]">
+		<property name="DeadBodyHitPoints" value="300"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="3" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceCloth" 		count="3" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="resourceCloth" 		count="3,4"/> 
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="0,1"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+		<drop event="Destroy" name="resourceScrapIron"		count="6,8"/>
+		<drop event="Destroy" name="resourceBrokenGlass"	count="2,3"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieUtilityWorker')]">
+		<property name="DeadBodyHitPoints" value="300"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceCloth" 		count="2" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="resourceCloth" 		count="2,3"/> 
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+		<drop event="Harvest" name="resourceScrapPolymers" 	count="2" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceScrapPolymers" 	count="1" tag="butcherHarvest"/>
+		<drop event="Destroy" name="resourceScrapPolymers" 	count="1,2"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieSoldier')]">
+		<property name="DeadBodyHitPoints" value="300"/>
+		<drop event="Harvest" 	name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest"	name="resourceCloth"			count="5"	tag="butcherHarvest"/>
+		<drop event="Harvest"	name="resourceLeather"			count="6"	tag="butcherHarvest"/>
+		<drop event="Harvest"	name="resourceScrapIron"		count="20"	tag="butcherHarvest"/>
+		<drop event="Harvest"	name="foodRottingFlesh"			count="3"	tag="butcherHarvest"/>
+		<drop event="Harvest"	name="resourceBone"				count="2"	tag="butcherHarvest"/>
+		<drop event="Destroy" 	name="oldCash" 					count="10,15"/>
+	</append>
+		
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieDemolition')]">
+		<property name="DeadBodyHitPoints" value="380"/>
+		<drop event="Harvest" 	name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest"	name="resourceCloth"			count="4"	tag="butcherHarvest"/>
+		<drop event="Harvest"	name="resourceLeather"			count="5"	tag="butcherHarvest"/>
+		<drop event="Harvest"	name="resourceScrapIron"		count="20"	tag="butcherHarvest"/>
+		<drop event="Harvest"	name="resourceAnimalFat"		count="1"	tag="butcherHarvest"/>
+		<drop event="Harvest"	name="foodRottingFlesh"			count="4"	tag="butcherHarvest"/>
+		<drop event="Harvest"	name="resourceBone"				count="2"	tag="butcherHarvest"/>
+		<drop event="Harvest"	name="resourceElectricParts"	count="2"	tag="butcherHarvest"/>
+		<drop event="Harvest"	name="thrownGrenade"			count="5"	tag="butcherHarvest"/>
+		<drop event="Destroy" 	name="oldCash" 					count="30,50"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieSkateboarder')]">
+		<property name="DeadBodyHitPoints" value="290"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="2" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceCloth" 		count="2" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="resourceCloth" 		count="2,3"/> 
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieBiker')]">
+		<property name="DeadBodyHitPoints" value="320"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
+		<drop event="Harvest" name="resourceLeather" 	count="2" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceLeather" 	count="2" tag="butcherHarvest"/>
+		<drop event="Destroy" name="resourceLeather" 	count="1"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="butcherHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="0,1"/>
+		<drop event="Destroy" name="oldCash" 			count="10,15"/>
+		<drop event="Harvest" name="resourceScrapPolymers" 	count="2" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceScrapPolymers" 	count="1" tag="butcherHarvest"/>
+		<drop event="Destroy" name="resourceScrapPolymers" 	count="1,2"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombiePartyGirl')]">
+		<property name="DeadBodyHitPoints" value="280"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceCloth" 		count="0,1"/> 
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="0,1"/>
+		<drop event="Harvest" name="resourceAnimalFat" 	count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="30,50"/>
+	</append>
+	
+	<append xpath="/entity_classes/entity_class[contains(@name,'zombieMutated')]">
+		<property name="DeadBodyHitPoints" value="270"/>
+		<drop event="Harvest" name="" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="resourceCloth" 		count="1" tag="butcherHarvest"/> 
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="allHarvest"/>
+		<drop event="Harvest" name="foodRottingFlesh" 	count="1" tag="butcherHarvest"/> 
+		<drop event="Destroy" name="foodRottingFlesh" 	count="1"/>
+		<drop event="Destroy" name="resourceAnimalFat" 	count="0,1"/>
+		<drop event="Harvest" name="resourceBone" 		count="1" tag="allHarvest"/>
+		<drop event="Destroy" name="resourceBone" 		count="1"/>
+		<drop event="Destroy" name="oldCash" 			count="1,10"/>
+	</append>
+	
+
+
+	<!-- ************************************* -->
+	<!-- ********** vanilla animals ********** -->
+	<!-- ************************************* -->
+	
+	<set xpath="/entity_classes/entity_class[@name='animalBear']/drop[@name='resourceAnimalFat']/@count">3</set> <!-- 5 -->
+	<set xpath="/entity_classes/entity_class[@name='animalZombieBear']/drop[@name='resourceAnimalFat']/@count">3</set> <!-- 5 -->
+	<set xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@name='resourceAnimalFat']/@count">2</set> <!-- 3 -->
+	<set xpath="/entity_classes/entity_class[@name='animalCoyote']/drop[@name='resourceAnimalFat']/@count">1</set> <!-- 2 -->
+	<set xpath="/entity_classes/entity_class[@name='animalDireWolf']/drop[@name='resourceAnimalFat']/@count">2</set> <!-- 3 -->
+	<set xpath="/entity_classes/entity_class[@name='animalMountainLion']/drop[@name='resourceAnimalFat']/@count">2</set> <!-- 4 -->
+	<set xpath="/entity_classes/entity_class[@name='animalZombieDog']/drop[@name='resourceAnimalFat']/@count">0</set> <!-- 1 -->
+	<set xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='resourceAnimalFat']/@count">2</set> <!-- 4 -->
+	<set xpath="/entity_classes/entity_class[@name='animalBossGrace']/drop[@name='resourceAnimalFat']/@count">10</set> <!-- 20 -->
+	<set xpath="/entity_classes/entity_class[@name='animalStag']/drop[@name='resourceAnimalFat']/@count">2</set> <!-- 3 -->
+	<set xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@name='resourceAnimalFat']/@count">1</set> <!-- 2 -->
+	
+	
+		
 </ErrorNull>

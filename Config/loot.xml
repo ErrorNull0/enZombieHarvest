@@ -54,30 +54,19 @@
 </lootgroup>
 
 <lootgroup name="LootBagMiner" count="1" level="0,999999">
-	<item name="resourceCoal"			count="100,200"/>
-	<item name="resourceOilShale"		count="100,200"/>
-	<item name="resourceScrapLead"		count="100,200"/>
-	<item name="resourceScrapIron"		count="100,200"/>
+	<item name="resourceCoal"			count="200,300"/>
+	<item name="resourceOilShale"		count="200,300"/>
+	<item name="resourceScrapLead"		count="200,300"/>
+	<item name="resourceScrapIron"		count="200,300"/>
 	<item name="resourceForgedIron"		count="6,12"/>
 </lootgroup>
 
-
-
-
-
-
-<!--
-<lootgroup name="SantaFood" count="1" level="0,999999">
-	<item name="foodCanBeef"			count="10,20"/>
-	<item name="foodCanChicken"			count="10,20"/>
-	<item name="foodCanLamb"			count="10,20"/>
-	<item name="foodCanChili"			count="10,20"/>
-	<item name="foodCanSham"			count="10,20"/>
-	<item name="foodCanPasta"			count="10,20"/>
-	<item name="foodCanSalmon"			count="10,20"/>
-	<item name="foodPumpkinBread"		count="20,30"/>
+<lootgroup name="LootBagUtility" count="1" level="0,999999">
+	<item name="resourceNail"			count="150,200"/>
+	<item name="resourceWood"			count="100,150"/>
+	<item name="resourceCement"			count="100,150"/>
+	<item name="resourceCobblestones"	count="100,150"/>
 </lootgroup>
--->
 
 <lootgroup name="SantaFood" count="1" level="0,999999">
 	<item name="foodCanBeef"			count="5,10"/>
@@ -147,7 +136,23 @@
 	<item name="resourceCoal"	count="300,400"/>
 </lootgroup>
 
+<lootgroup name="perkBooksBasic" count="1" level="0,999999">
+	<item name="modMeleeStructuralBraceSchematic"	count="1"/>
+	<item name="modGunFlashlightSchematic"			count="1"/>
+	<item name="modArmorStoragePocketSchematic"		count="1"/>
+	<item name="modArmorInsulatedLinerSchematic"	count="1"/>
+	<item name="modArmorCoolingMeshSchematic"		count="1"/>
+	<item name="modArmorImprovedFittingsSchematic"	count="1"/>
+	<item name="bookNeedleAndThreadDesertWear"		count="1"/>
+	<item name="bookNeedleAndThreadWinterWear"		count="1"/>
+	<item name="bookNeedleAndThreadFootwear"		count="1"/>
+</lootgroup>
 
+<lootgroup name="LootBagSchool" count="all" level="0,999999">
+	<item name="resourcePaper"		count="5,10"/>
+	<item name="resourcePaper"		count="5,10"/>
+	<item group="perkBooksBasic"	count="0,1"/>
+</lootgroup>
 
 
 
@@ -185,35 +190,61 @@
 	<item group="LootSantaHelperBad" count="1"/>
 </lootgroup>
 
+<lootgroup name="en_bag_utility" count="all" level="0,999999">
+	<item group="LootBagUtility" count="1"/>
+</lootgroup>
+
+<lootgroup name="en_bag_utilityLarge" count="all" level="0,999999">
+	<item group="LootBagUtility" count="2"/>
+</lootgroup>
+
+<lootgroup name="en_bag_school" count="all" level="0,999999">
+	<item group="LootBagSchool" count="1"/>
+</lootgroup>
 
 <!-- enForestHikerFemale1 enForestHikerFemale2 enForestHikerMale1 enForestHikerMale2 -->
-<lootcontainer id="800" name="cntHikerBackpack" count="1" size="8,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="EnQualityTemplate">
-	<item group="en_backpack_hiker"	count="1"/>
+<lootcontainer name="cntHikerBackpack" count="1" size="8,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="EnQualityTemplate">
+	<item group="en_backpack_hiker" count="1"/>
 </lootcontainer>
 
 <!-- enDesertMiner1 enDesertMiner2 enDesertMiner3 -->
-<lootcontainer id="803" name="cntBagMiner" count="1" size="8,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="EnQualityTemplate">
-	<item group="en_bag_miner"	count="1"/>
+<lootcontainer name="cntBagMiner" count="1" size="8,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="EnQualityTemplate">
+	<item group="en_bag_miner" count="1"/>
 </lootcontainer>
 
 <!-- enBurntGiant enWastelandGiant -->
-<lootcontainer id="806" name="cntBagGiant" count="1" size="8,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="EnQualityTemplate">
-	<item group="en_bag_giant"	count="1"/>
+<lootcontainer name="cntBagGiant" count="1" size="8,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="EnQualityTemplate">
+	<item group="en_bag_giant" count="1"/>
 </lootcontainer>
 
 <!-- enDesertCowboy3 -->
-<lootcontainer id="809" name="cntBagCowboy" count="1" size="8,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="EnQualityTemplate">
-	<item group="en_bag_cowboy3"	count="1"/>
+<lootcontainer name="cntBagCowboy" count="1" size="8,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="EnQualityTemplate">
+	<item group="en_bag_cowboy3" count="1"/>
 </lootcontainer>
 
 <!-- enSnowSanta1 -->
-<lootcontainer id="812" name="cntSantaBag" count="1" size="8,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="EnQualityTemplate">
-	<item group="en_santabag"	count="1"/>
+<lootcontainer name="cntSantaBag" count="1" size="8,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="EnQualityTemplate">
+	<item group="en_santabag" count="1"/>
 </lootcontainer>
 
 <!-- enSnowSantaHelper1 -->
-<lootcontainer id="812" name="cntSantaHelperBag" count="1" size="8,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="EnQualityTemplate">
+<lootcontainer name="cntSantaHelperBag" count="1" size="8,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="EnQualityTemplate">
 	<item group="en_santahelperbag"	count="1"/>
+</lootcontainer>
+
+<!-- enUtilityFemale2 -->
+<lootcontainer name="cntBagUtilityFemale2" count="1" size="8,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="EnQualityTemplate">
+	<item group="en_bag_utility" count="1"/>
+</lootcontainer>
+
+<!-- enUtilityMale5 -->
+<lootcontainer name="cntBagUtilityMale5" count="1" size="8,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="EnQualityTemplate">
+	<item group="en_bag_utilityLarge" count="1"/>
+</lootcontainer>
+
+<!-- enSchoolFemale1 enSchoolFemale2 enSchoolMale1 enSchoolMale2-->
+<lootcontainer name="cntBagSchool" count="1" size="8,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="EnQualityTemplate">
+	<item group="en_bag_school" count="1"/>
 </lootcontainer>
 
 </append>

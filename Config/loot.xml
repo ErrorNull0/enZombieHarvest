@@ -36,6 +36,14 @@
 	<item name="casinoCoin"			count="50,100"/>
 </lootgroup>
 
+<lootgroup name="LootWood" count="1" level="0,999999">
+	<item name="resourceWood"		count="140,180"/>
+</lootgroup>
+
+<lootgroup name="LootGas" count="1" level="0,999999">
+	<item name="ammoGasCan"			count="100,200"/>
+</lootgroup>
+
 <lootgroup name="LootBackpackHiker" count="1" level="0,999999">
 	<item name="foodBakedPotato"			count="1"/>
 	<item name="foodShamSandwich"			count="1"/>
@@ -170,6 +178,15 @@
 	<item group="LootBagMiner" count="1"/>
 </lootgroup>
 
+<lootgroup name="en_bag_lumberjack3" count="all" level="0,999999">
+	<item group="LootWood" count="1"/>
+</lootgroup>
+
+<lootgroup name="en_bag_lumberjack4" count="all" level="0,999999">
+	<item group="LootWood" count="2"/>
+	<item group="LootGas" count="1"/>
+</lootgroup>
+
 <lootgroup name="en_bag_giant" count="all" level="0,999999">
 	<item group="LootCoinsMedium" count="1"/>
 	<item group="LootMeatSmall" count="1"/>
@@ -246,6 +263,17 @@
 <lootcontainer name="cntBagSchool" count="1" size="8,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="EnQualityTemplate">
 	<item group="en_bag_school" count="1"/>
 </lootcontainer>
+
+<!-- enLumberjack3 -->
+<lootcontainer name="cntBagLumberjack3" count="1" size="8,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="EnQualityTemplate">
+	<item group="en_bag_lumberjack3" count="1"/>
+</lootcontainer>
+
+<!-- enLumberjack4 -->
+<lootcontainer name="cntBagLumberjack4" count="1" size="8,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" loot_quality_template="EnQualityTemplate">
+	<item group="en_bag_lumberjack4" count="1"/>
+</lootcontainer>
+
 
 </append>
 	

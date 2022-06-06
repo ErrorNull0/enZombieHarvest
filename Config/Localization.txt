@@ -1,3 +1,5 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate
+
 enWornCandyKnife,items,Melee,,,Worn Candy Cane Knife,,
 enWornCandyKnifeDesc,items,Melee,,,It's a bit used and gnawed upon and not as sharp as a real knife but it can still inflict some sugar-filled bleeding wounds.\n\nRepair with a Repair Kit.,,
 

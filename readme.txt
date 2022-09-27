@@ -1,13 +1,16 @@
-enZombie Harvest v1.6
+enZombies Harvest v1.61
 https://community.7daystodie.com/topic/24594-enzombies-more-zombie-variations/
 
 This mod is meant for use with enZombies v2.6 and adds the ability to harvest all enZombies and vanilla zombies for resources (eg. cloth, rotten flesh, bones) when they are defeated. Zombies that are not harvested will remain for 90 seconds before disappearing. This mod also slightly changes the recipes of the main game to require more of those resources in order to rebalance the game.
 
 
+Version 1.61 Update:
+- updates to several existing zombie body harvest items
+
 Version 1.6 Update:
 - added body harvest to new elemental zombies: enElementalOrganicCrawler, enElementalSandCrawler, enElementalSandWalker, enElementalStoneCrawler, enElementalStoneWalker, enElementalIronCrawler, enElementalIronWalker, and enElementalRadiatedWalker
 - added body harvest to new hosptial zombies: patientFemale1, patientFemale2, and patientFemale3, patientMale1 and patientMale2, labFemale1, nurseHD
-- added boyd harvest to biker3, biker4, lumberjack3 and lumberjack4
+- added body harvest to biker3, biker4, lumberjack3 and lumberjack4
 - updated code to reflect name change of enSnufkinBoss to enScientistBoss1
 
 Version 1.5 Update:
